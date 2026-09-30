@@ -37,7 +37,19 @@ function uniqueValues(values) {
 // Гарантируется, что numbers содержит хотя бы одно число.
 // Math.min() и Math.max() в этой задаче не используйте.
 function minMax(numbers) {
-  // TODO
+  let min = numbers[0];
+  let max = numbers[0];
+
+  for (let i = 1; i < numbers.length; i++) {
+    const current = numbers[i];
+    if (current < min) {
+      min = current; 
+    } 
+    if (current > max) {
+      max = current;
+    }
+  }
+  return [min, max]
 }
 
 // 4. Сокращение текста
