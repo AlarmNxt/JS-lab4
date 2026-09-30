@@ -93,7 +93,7 @@ function swapParts(text) {
 // parseUrlParts("https://site.ru/catalog/?id=5")
 // -> ["https", "site.ru", "/catalog/", "id=5"]
 function parseUrlParts(url) {
-  // TODO
+  //не очень понял как делать
 }
 
 module.exports = {
