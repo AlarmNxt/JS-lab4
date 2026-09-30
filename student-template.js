@@ -22,7 +22,14 @@ function sumArray(numbers) {
 // Порядок первого появления элементов нужно сохранить.
 // Не изменяйте исходный массив.
 function uniqueValues(values) {
-  // TODO
+  const result = [];
+
+  for (let val of values) {
+    if (!result.includes(val)) {
+      result.push(val);
+    }
+  }
+  return result;
 }
 
 // 3. Минимум и максимум
