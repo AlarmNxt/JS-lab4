@@ -175,3 +175,68 @@ function parseUrlParts(url) {
 console.log(
   parseUrlParts("https://dns-shop.ru/catalog/personal/?price=20000&brand=asus")
 );
+section("22. for...of — значения массива");
+
+const methodNumbers = [10, 20, 30];
+
+for (const number of methodNumbers) {
+  console.log(number);
+}
+
+section("23. for...in — индексы массива");
+
+for (const index in methodNumbers) {
+  console.log(index, typeof index, methodNumbers[index]);
+}
+
+section("24. forEach — действие для каждого элемента");
+
+const methodFruits = ["apple", "banana", "orange"];
+
+methodFruits.forEach((fruit, index) => {
+  console.log(`${index + 1}: ${fruit}`);
+});
+
+section("25. map — преобразование элементов");
+
+const mapSource = [1, 2, 3, 4];
+const doubled = mapSource.map((number) => number * 2);
+
+console.log(mapSource);
+console.log(doubled);
+
+section("26. filter — отбор элементов");
+
+const filterSource = [1, 2, 3, 4, 5, 6];
+const evenNumbers = filterSource.filter((number) => number % 2 === 0);
+
+console.log(evenNumbers);
+
+section("27. reduce — сведение к одному значению");
+
+const reduceSource = [1, 2, 3, 4, 5];
+const reduceSum = reduceSource.reduce((accumulator, number) => {
+  return accumulator + number;
+}, 0);
+
+console.log(reduceSum);
+
+section("28. Строка -> массив -> map -> строка");
+
+const transformText = "javascript is very useful";
+const upperText = transformText
+  .split(" ")
+  .map((word) => word.toUpperCase())
+  .join(" ");
+
+console.log(upperText);
+
+section("29. Строка -> массив -> filter -> строка");
+
+const filterText = "one javascript two browser three";
+const filteredText = filterText
+  .split(" ")
+  .filter((word) => word.length > 3)
+  .join(" ");
+
+console.log(filteredText);
