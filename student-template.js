@@ -9,7 +9,12 @@
 // Вернуть сумму всех чисел массива numbers.
 // Гарантируется, что массив не пуст и содержит только числа.
 function sumArray(numbers) {
-  // TODO
+  let sum = 0;
+
+  for (let num of numbers) {
+    sum += num; 
+  }
+  return sum;
 }
 
 // 2. Уникальные значения
