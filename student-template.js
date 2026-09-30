@@ -58,7 +58,24 @@ function minMax(numbers) {
 // Если слов не больше maxWords — вернуть текст без изменений по смыслу, но без пробелов по краям.
 // В условии гарантируется, что слова разделены одним пробелом.
 function shortenText(text, maxWords) {
-  // TODO
+
+  const cleanText = text.trim();
+  const words = cleanText.split(' ');
+
+  if (words.length <= maxWords) {
+    return cleanText;
+  }
+
+  const result = words.slice(0, maxWords).join(' ');
+
+  const lastChar = result[result.length - 1];
+
+  let tochki = '...';
+  if (lastChar === '.') {
+    tochki = '..';
+  }
+
+  return result + tochki;
 }
 
 // 5. Поменять две части строки местами
