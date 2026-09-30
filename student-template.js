@@ -82,7 +82,8 @@ function shortenText(text, maxWords) {
 // Строка состоит ровно из двух непустых частей, разделённых одним пробелом.
 // Пример: swapParts("hello world") -> "world hello"
 function swapParts(text) {
-  // TODO
+  const parts = text.split(' ');
+  return parts[1] + ' ' + parts[0];
 }
 
 // 6. Разбор URL без объекта URL
